@@ -12,22 +12,23 @@ my $build = Module::Build->new(module_name => 'Net::Delicious',
 			       requires => {
                                             'LWP::UserAgent' => '',
                                             'HTTP::Request'  => '',
-                                            'YAML'           => '>= 0.35',
+                                            'YAML'           => '0.35',
                                             'URI'            => '',
-                                            'Log::Dispatch'  => '>= 2',
-                                            'XML::Simple'    => '>= 2',
-                                            'Time::HiRes'    => '>= 1.65',
-                                            'FileHandle'     => '>= 2',
-                                            'IO::AtomicFile' => '>= 2.1',
-                                            'File::Spec'     => '>= 0.8',
-                                            'Date::Parse'    => '>= 2.27',
+                                            'Log::Dispatch'  => '2',
+                                            'XML::Simple'    => '2',
+                                            'Time::HiRes'    => '1.65',
+                                            'FileHandle'     => '2',
+                                            'IO::AtomicFile' => '2.1',
+                                            'File::Spec'     => '0.8',
+                                            'Date::Parse'    => '2.27',
                                             'Config::Simple' => '2',
                                             'Crypt::SSLeay'  => '0',
                                            },
 			       build_requires => {
-                                                  'Test::Simple'              => '>= 0.47',
+                                                  'Test::Simple' => '0.47',
                                                  },
 			       create_readme      => 1,
-			       create_makefile_pl => 'passthrough');
+			       create_makefile_pl => 'passthrough'
+			       );
 
 $build->create_build_script();
